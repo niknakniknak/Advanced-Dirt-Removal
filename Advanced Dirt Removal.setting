@@ -255,6 +255,21 @@
 					},
 					ViewInfo = OperatorInfo { Pos = { 0, 16.5 } },
 				},
+				PolarityMask1 = ChannelBoolean {
+					CtrlWShown = false,
+					Inputs = {
+						Operation = Input { Value = 8, },
+						Background = Input {
+							SourceOp = "ChannelBooleans1_2",
+							Source = "Output",
+						},
+						Foreground = Input {
+							SourceOp = "Switch1_3",
+							Source = "Output",
+						}
+					},
+					ViewInfo = OperatorInfo { Pos = { 0, 49.5 } },
+				},
 				ChannelBooleans1 = ChannelBoolean {
 					CtrlWShown = false,
 					Inputs = {
@@ -311,7 +326,7 @@
 					CtrlWShown = false,
 					Inputs = {
 						EffectMask = Input {
-							SourceOp = "ChannelBooleans3",
+							SourceOp = "Switch1_2",
 							Source = "Output",
 						},
 						ApplyMaskInverted = Input { Value = 1, },
@@ -427,7 +442,7 @@
 						},
 						Name1 = Input { Value = "Motion Mask", },
 						Input1 = Input {
-							SourceOp = "ChannelBooleans1_2",
+							SourceOp = "PolarityMask1",
 							Source = "Output",
 						}
 					},
